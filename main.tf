@@ -15,4 +15,8 @@ resource "aws_db_instance" "rds_instance" {
   publicly_accessible    = var.publicly_accessible
   vpc_security_group_ids = var.security_groups
 }
-
+ resource "random_password" "db_password" {
+  length           = 12
+  special          = true
+  override_special = "_%@"
+}

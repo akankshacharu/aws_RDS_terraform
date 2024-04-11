@@ -8,7 +8,6 @@ resource "random_password" "password" {
   override_special = "!#$%&*()-_=+[]{}<>:?"
 }
 
-
 resource "aws_db_instance" "rds_instance" {
   count = var.instance_count
 

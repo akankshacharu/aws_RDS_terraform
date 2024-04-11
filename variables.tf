@@ -1,5 +1,6 @@
 variable "region" {
   type = string
+  default = "ap-south-1"
  description = "AWS region where RDS instance will be deploye"
 }
 
@@ -41,7 +42,7 @@ variable "password" {
 
 variable "storage_size" {
   type = number
-  default = 5
+  default = 20
   description = "Allocated storage for the RDS instance (in GB)"
 }
 
@@ -53,13 +54,13 @@ variable "storage_type" {
 
 variable "publicly_accessible" {
   description = "Whether the RDS instance is publicly accessible"
-  default     = True
-  type = bool
+  default     = "true"
+  type = string
 }
 
 variable "security_groups" {
   description = "List of security group IDs to associate with the RDS instance"
   type        = list(string)
-  default = [ "value" ]
+  default = [ "sg-0dadcb10199a64c28" ]
 }
 

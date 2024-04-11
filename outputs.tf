@@ -5,4 +5,5 @@ output "rds_instance_endpoint" {
 output "rds_password" {
   value       = random_password.password.result
   description = "The generated random password"
+  sensitive = true
 }

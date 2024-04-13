@@ -11,7 +11,7 @@ variable "instance_count" {
 
 variable "name" {
  type = string
- default = "RDS-for-testing"
+ default = "testing"
  description = "Name for the RDS instance"
 }
 
@@ -35,7 +35,7 @@ variable "username" {
 
 variable "password" {
   description = "Master password for the RDS instance" 
-  default = "${random_password.db_password.result}"
+  default = "akku"
   type = string
 }
 
@@ -53,7 +53,7 @@ variable "storage_type" {
 
 variable "publicly_accessible" {
   description = "Whether the RDS instance is publicly accessible"
-  default     = false
+  default     = true
 }
 
 variable "security_groups" {

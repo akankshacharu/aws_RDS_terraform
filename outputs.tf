@@ -4,4 +4,5 @@ output "rds_instance_endpoint" {
 
 output "generated_password" {
   value = random_password.db_password.result
+  sensitive = true
 }

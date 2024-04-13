@@ -33,9 +33,11 @@ variable "username" {
  description = "Master username for the RDS instance"
 }
 
-#variable "password" {
-#  description = "Master password for the RDS instance" }
-
+variable "password" {
+  description = "Master password for the RDS instance" 
+  default = "${random_password.db_password.result}"
+  type = string
+}
 
 variable "storage" {
  type = number
